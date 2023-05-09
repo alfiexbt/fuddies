@@ -1,64 +1,88 @@
+
 *{
-    --bg-color: rgb(191, 242, 244);
+    /* --bg-color: rgb(191, 242, 244); */
+    
     --f-color: black;
     font-family: 'Happy Monkey', cursive;
-}
-
-body{
-    background-color: var(--bg-color);
-}
-
-li{
-    list-style: none; 
-}
-
-a{
-    text-decoration: none;
-    color: black;
-    font-size: 1.5rem; 
-}
-
-h2{
-   display: flex;
-   text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 /* ------------------------------------------------------------------------------ */
 
 /* FUDDIES HUGE LOGO   */
-section.s1{
-    background: var(--bg-color);
+
+.brand-section{
     display: flex; 
     flex-direction: column;
-    align-items: center; 
-    font-size:x-large;
+    align-items: center;
+    background-color: rgb(248, 240, 227);
 }
+
+.brand-section .b-s1{
+    margin-top: 120px;
+    text-align: center;
+}
+
+.brand-section .b-s2{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.brand-section .b-s3{
+    font-size: 80px;
+    margin-bottom: 260px;
+    text-align: center;
+}
+
 .secondary-logo{
     display: flex;
-    padding-top: 50px;
+    padding-top: 10px;
     height: 260px;
     justify-content: center;
 }
 
+.clutchy_btn{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 25px;
+    line-height: .5;
+    border-radius: 18px;
+    transition-duration: .3s;
+    border: 2px;
+    min-width: 160px;
+    white-space: normal;
+    text-align: center;
+    padding: 18px 18px 18px;
+    box-shadow: inset 0 0 0 2px #000000;
+    background-color: rgba(133,214,222);
+    height: 70px;
+}
+
 /* ------------------------------------------------------------------------------ */
 
-/* NAVBAR */
+/* HEADER & NAVBAR */
 
 header{
     position: relative;
-    padding: 0 2rem;
-    background: var(--bg-color);
+    padding: 0 5rem;
+    background: rgb(248, 240, 227);
     height: 90px;
     color: var(--f-color); 
 }
 
 .primary-logo{
-    height: 80px;
+    height: 70px;
+    align-items: center;
+    text-align: center;
 }
 
+
 .navbar{
-    font-weight: bold;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
     height: 60px;
     max-width: 1200px;
@@ -68,17 +92,24 @@ header{
     justify-content: space-between;
     border-bottom: solid black;
     border-bottom-width: 0.1px;
-    
-}
-.navbar .logo{
-    font-size: 1.5rem;
-    font-weight: bold;
 }
 
-.navbar .links{
+.navbar .navbar-social-links{
     padding-right: 20px;
     display: flex; 
     gap: 3rem;
+}
+
+.navbar .navbar-social-links a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;   
+}
+
+.dropdown_menu a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px; 
 }
 
 
@@ -91,11 +122,81 @@ header{
 
 /* ------------------------------------------------------------------------------ */
 
+/* FOOTER */
+.footer .fa-brands{
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.footer{
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+    justify-content:space-between;
+    justify-content:space-evenly;
+    border-top: solid black;
+    border-top-width: 0.1px;
+}
+
+.col-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.col-1 h1{
+    font-size: 15px;
+}
+
+.col-1-logo img{
+    height: 200px;
+
+}
+
+.col-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.col-2 ul li{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.col-3{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+
 
   /* IMAGE CAROUSEL */
+  
+.carousel-section {
+    position: relative;
+    background-color: rgb(191, 242, 244);
+    height: 100vh;
+}
 
-.wrapper1{
-    background: var(--bg-color);
+.wrapper-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper-box h1{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 200px;
 }
 
 .wrapper{
@@ -103,7 +204,7 @@ header{
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    padding: 0 35px;
+    padding-top: 10px;
     position: relative;
     align-items: center;
     justify-content: center;
@@ -119,36 +220,10 @@ header{
     font-size: 1.2rem; 
     text-align: center; 
     line-height: 46px;
-    background: #fff;
-    border-radius: 50%; 
+    background:rgb(248, 240, 227);
+    border-radius: 18px; 
     transform: translateY(-50%);
  }
-
-.clutchy{
-    display: inline-block;
-    outline: none;
-    cursor: pointer;
-    font-size: 25px;
-    line-height: .5;
-    border-radius: 300px;
-    transition-duration: .3s;
-    border: 2px solid transparent;
-    letter-spacing: 2px;
-    min-width: 160px;
-    white-space: normal;
-    font-weight: 700;
-    text-align: center;
-    padding: 16px 14px 18px;
-    color: black;
-    box-shadow: inset 0 0 0 2px #000000;
-    background-color: transparent;
-    height: 70px;
-}
-
-.clutchy:hover{
-    color: #0a0707;
-    background-color: rgba(83, 183, 198, 0.365);
-}
 
 
 .wrapper i:first-child{
@@ -161,7 +236,6 @@ header{
   }
 
 .wrapper .carousel{
-    
     font-size: 0px; 
     cursor: pointer;
     overflow: hidden;
@@ -225,21 +299,32 @@ header{
 /* 
 TESTIMONIALS */
 
+.testimonials-wrapper{
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+}
+.testimonials-wrapper h1{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+}
+
 .testimonials {
-    max-width: 1440px; 
+    max-width: 1400px; 
     margin: 40px auto; 
     padding: 40px round;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 15px; 
-   
-  }
+    gap: 20px; 
+}
 
 .card {
     border-radius: 18px;
     padding: 30px; 
     border: .1px solid grey;
-    box-shadow: rgba(0, 0, 0, 0.2)1.5px 1.5px 1.5px 1.5px;
+    box-shadow: rgba(0, 0, 0, 0.3)5px 5px 5px 1px;
     margin-bottom: 2px;
     line-height: 20px; 
 }
@@ -257,12 +342,16 @@ TESTIMONIALS */
     margin-bottom: 10px;
 }
 
+.testimonials .fa-brands{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
 .card__header p {
     font-size: 15px;
     opacity: 50%; 
     margin-top: 10px;
 }
-
 
 .card__img {
     width: 100px; 
@@ -287,27 +376,13 @@ TESTIMONIALS */
     margin-top: 10px;
 }
 
-.card--bg-purple {
-    color: #060000; 
-    background-image: url(images2/bg-pattern-quotation.svg);
-    background-repeat: no-repeat;
-    background-position: top 10px right 100px; 
-}
-
-.card--bg-gray-blue {
-    color: #060000; 
-}
-
-.card--bg-black-blue {
-    color: #060000; 
-}
-.card--bg-teal {
-    color: #060000; 
-}
+.card--bg-purple,
+.card--bg-gray-blue,
+.card--bg-black-blue,
+.card--bg-teal,
 .card--bg-green {
     color: #060000; 
 }
-
 
 .card:nth-of-type(1){
     grid-column: 1/3;
@@ -323,16 +398,6 @@ TESTIMONIALS */
     grid-row:  1/3;
 }
 /* ------------------------------------------------------------------------------ */
-
-
-/* FOOTER */
-
-footer{
-    background: var(--bg-color);
-    height: 90px;
-}
-/* ------------------------------------------------------------------------------ */
-
 
 
 /* SOCIAL MEDIA LINKS FOR CAROUSEL */
@@ -351,7 +416,7 @@ footer{
 
 /* SOCIAL MEDIA LINKS FOR NAVBAR */
 @media (max-width: 900px){
-    .navbar .links,
+    .navbar .navbar-social-links,
     .navbar .action_btn{
         display: none;
     }
@@ -362,6 +427,8 @@ footer{
         display: block;
     }
 }
+
+
 
 @media (max-width: 550px){
     .dropdown_menu{
@@ -379,9 +446,7 @@ footer{
 @media (max-width: 720px){
 
     .secondary-logo{
-        height: 110px;
+        height: 150px;
     }
 }
 
-@media (max-width: 550px){
-    }
