@@ -1,115 +1,51 @@
 
 *{
-    /* --bg-color: rgb(191, 242, 244); */
-    
-    --f-color: black;
     font-family: 'Happy Monkey', cursive;
     margin: 0;
     padding: 0;
     list-style: none;
+    box-sizing: border-box;
+    --bg-color-blue: #6CDADE; 
+    --bg-color-beige: rgb(248, 240, 227); 
 }
-
-/* ------------------------------------------------------------------------------ */
-
-/* FUDDIES HUGE LOGO   */
-
-.brand-section{
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(248, 240, 227);
-}
-
-.brand-section .b-s1{
-    margin-top: 120px;
-    text-align: center;
-}
-
-.brand-section .b-s2{
-    font-size: 25px;
-    font-weight: bold;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.brand-section .b-s3{
-    font-size: 80px;
-    margin-bottom: 260px;
-    text-align: center;
-}
-
-.secondary-logo{
-    display: flex;
-    padding-top: 10px;
-    height: 260px;
-    justify-content: center;
-}
-
-.clutchy_btn{
-    display: inline-block;
-    cursor: pointer;
-    font-size: 25px;
-    line-height: .5;
-    border-radius: 18px;
-    transition-duration: .3s;
-    border: 2px;
-    min-width: 160px;
-    white-space: normal;
-    text-align: center;
-    padding: 18px 18px 18px;
-    box-shadow: inset 0 0 0 2px #000000;
-    background-color: rgba(133,214,222);
-    height: 70px;
-}
-
-/* ------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* HEADER & NAVBAR */
 
 header{
+    display: flex;
     position: relative;
-    padding: 0 5rem;
-    background: rgb(248, 240, 227);
+    padding-top: 30px;
+    background: var(--bg-color-beige);
     height: 90px;
     color: var(--f-color); 
+    z-index: 2;
 }
 
 .primary-logo{
-    height: 70px;
-    align-items: center;
-    text-align: center;
+    display: flex;
+    height: 65px;
 }
 
-
 .navbar{
-    padding: 10px;
+    padding: 0 5rem;
+    margin: 0;
     width: 100%;
     height: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: solid black;
-    border-bottom-width: 0.1px;
 }
 
 .navbar .navbar-social-links{
-    padding-right: 20px;
     display: flex; 
-    gap: 3rem;
+    gap: 2.5rem;
 }
 
 .navbar .navbar-social-links a{
     text-decoration: none;
     color: black;
-    font-size: 25px;   
-}
-
-.dropdown_menu a{
-    text-decoration: none;
-    color: black;
-    font-size: 25px; 
+    font-size: 22px;   
 }
 
 
@@ -120,45 +56,136 @@ header{
     display: none;
 }
 
-/* ------------------------------------------------------------------------------ */
+/* HEADER & NAVBAR */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* BRAND SECTION */
+
+.brand_section{
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-color-beige);
+    margin-bottom: -2px;
+}
+
+.brand_section .b_s1{
+    margin-top: 70px;
+    text-align: center;
+}
+
+.brand_section .b_s2{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.b_s3{
+    padding-bottom: 300px;
+    padding-top: 20px;
+}
+
+.b_s3 a{
+    text-decoration: none;
+    color: black;
+}
+
+.secondary-logo{
+    display: flex;
+    padding-top: 10px;
+    height: 260px;
+    justify-content: center;
+}
+
+/* CUSTOM WAVES SEPERATING SECTIONS USING SHAPEDIVIDER.APP */
+
+.custom-shape-divider-bottom-1683692052 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1683692052 svg {
+    position: relative;
+    display: block;
+    width: calc(124% + 1.3px);
+    height: 198px;
+}
+
+.custom-shape-divider-bottom-1683692052 .shape-fill {
+    fill: #6CDADE;
+}
+
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1683692052 svg {
+        width: calc(120% + 1.3px);
+        height: 108px;
+    }
+}
+
+/* STYLING THE BUY ON CLUTCHY BUTTON  */
+
+.clutchy_btn{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 25px;
+    border-radius: 18px;
+    transition-duration: .3s;
+    outline: none;
+    background-color: var(--bg-color-beige);
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    overflow:hidden;
+}
+
+.clutchy_btn .button_text{ 
+    align-items: center;
+    padding: 15px;
+    height: 100%;
+}
+
+/* BRAND SECTION (FIRST) */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* FOOTER */
+
 .footer .fa-brands{
     font-size: 30px;
     color: rgb(0, 0, 0);
 }
 
 .footer{
+    background-color: var(--bg-color-blue);
+    padding: 0 5rem;
     display: flex; 
     flex-direction: row; 
     align-items: center;
     justify-content:space-between;
     justify-content:space-evenly;
-    border-top: solid black;
-    border-top-width: 0.1px;
 }
 
 .col-1{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.col-1 h1{
-    font-size: 15px;
 }
 
 .col-1-logo img{
     height: 200px;
-
 }
 
 .col-2{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
 }
 
 .col-2 ul li{
@@ -166,25 +193,54 @@ header{
     display: flex;
     flex-direction: row;
     display: inline-block;
-    margin-right: 1rem;
+    margin: 0.55rem;
 }
 
 .col-3{
     display: flex;
     text-align: center;
     flex-direction: column;
+    padding-left: 50px;
     gap: 5px;
+    margin-right: 150px;
 }
 
 
+@media screen and (max-width: 700px) {
+    .footer{
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content:space-between;
+        justify-content:space-evenly; 
+    }
+    .footer .col-1{
+        height: 150px;
+    }
+    .footer .col-3{
+        margin-top: 25px;
+        margin-left: 150px;
+        padding-left: 0;
+    }
+}
 
+/* FOOTER */
 
-  /* IMAGE CAROUSEL */
-  
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* IMAGE CAROUSEL */
+
 .carousel-section {
     position: relative;
-    background-color: rgb(191, 242, 244);
-    height: 100vh;
+    background-color: var(--bg-color-blue);
+    height: 110vh;
+    margin-bottom: -5px;
+}
+
+.carousel-heading{
+    color: var(--f-color);
+    padding-bottom: 100px;
 }
 
 .wrapper-box{
@@ -196,11 +252,10 @@ header{
     font-size: 35px;
     font-weight: bold;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 .wrapper{
-    background: var(--bg-color);
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -220,7 +275,7 @@ header{
     font-size: 1.2rem; 
     text-align: center; 
     line-height: 46px;
-    background:rgb(248, 240, 227);
+    background:var(--bg-color-beige);
     border-radius: 18px; 
     transform: translateY(-50%);
  }
@@ -252,7 +307,7 @@ header{
     pointer-events: none;
 }
 
- .carousel img{
+.carousel img{
     height: 340px; 
     object-fit:cover;
     margin-left: 14px; 
@@ -264,18 +319,49 @@ header{
     margin-left: 0px; 
  }
 
-/* ------------------------------------------------------------------------------ */
+ /* CUSTOM WAVES SEPERATING SECTIONS USING SHAPEDIVIDER.APP */
 
+ .custom-shape-divider-bottom-1683667565 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1683667565 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 136px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1683667565 .shape-fill {
+    fill:var(--bg-color-beige);
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1683667565 svg {
+        width: calc(120% + 1.3px);
+        height: 108px;
+    }
+}
+/* IMAGE CAROUSEL */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* DROPDOWN MENU */
+
 .dropdown_menu{
     display: none;
     position: absolute;
     right: 2rem; 
-    top: 60px;
+    top: 85px;
     height: 0;
-    width: 300px;
-    background: rgba(255,255,255,0.1);
+    width: 90%;
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
@@ -283,7 +369,8 @@ header{
 }
 
 .dropdown_menu.open{
-    height: 150px; 
+    height: 100px; 
+    
 }
 
 .dropdown_menu li{
@@ -293,47 +380,54 @@ header{
     justify-content: center;
 }
 
+.dropdown_menu a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px; 
+}
 
-/* ------------------------------------------------------------------------------ */
+/* DROPDOWN MENU */
 
-/* 
-TESTIMONIALS */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* TESTIMONIALS SECTION */
+
 
 .testimonials-wrapper{
+    background-color: var(--bg-color-beige);
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
     display: flex; 
     flex-direction: column;
     align-items: center; 
+    padding-bottom: 275px;
 }
+
 .testimonials-wrapper h1{
+    display: flex;
     font-size: 35px;
     font-weight: bold;
     text-align: center;
     align-items: center;
+    padding-bottom: 100px;
+    padding-top: 70px;
+    max-width: 900px;
 }
 
-.testimonials {
-    max-width: 1400px; 
-    margin: 40px auto; 
-    padding: 40px round;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px; 
-}
-
-.card {
+.card{
     border-radius: 18px;
     padding: 30px; 
-    border: .1px solid grey;
-    box-shadow: rgba(0, 0, 0, 0.3)5px 5px 5px 1px;
+    box-shadow: rgba(0, 0, 0, 0.3)5px 5px 5px 0.5px;
     margin-bottom: 2px;
-    line-height: 20px; 
+    line-height: 25px; 
+    border: 0.1px solid grey;
 }
 .card__header {
-    background: none;
-    border-radius: 18px;
-    display: flex; 
+    display: flex;
+    padding:0;
     align-items: center;
-    margin-bottom: 45px;
+    margin-bottom: 50px;
 }
 
 .card__header h3{
@@ -348,9 +442,10 @@ TESTIMONIALS */
 }
 
 .card__header p {
-    font-size: 15px;
+    font-size: 16px;
     opacity: 50%; 
     margin-top: 10px;
+    line-height: 20px;
 }
 
 .card__img {
@@ -376,31 +471,54 @@ TESTIMONIALS */
     margin-top: 10px;
 }
 
-.card--bg-purple,
-.card--bg-gray-blue,
-.card--bg-black-blue,
-.card--bg-teal,
-.card--bg-green {
-    color: #060000; 
+.testimonials {
+    margin: 0 300px; 
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px; 
 }
 
 .card:nth-of-type(1){
-    grid-column: 1/3;
+    grid-column: 1/2;
 }
 
-.card:nth-of-type(4){
-    grid-column: 2/4;
-    grid-row: 2;
+.card:nth-of-type(2){
+    grid-column: 2/3;
 }
 
-.card:nth-of-type(5){
-    grid-column: 4/5;
-    grid-row:  1/3;
-}
-/* ------------------------------------------------------------------------------ */
+/* CUSTOM WAVES SEPERATING SECTIONS USING SHAPEDIVIDER.APP */
 
+.custom-shape-divider-bottom-1683669013 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    margin-bottom: -10px;
+}
+.custom-shape-divider-bottom-1683669013 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 185px;
+}
+.custom-shape-divider-bottom-1683669013 .shape-fill {
+    fill: var(--bg-color-blue);
+}
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1683669013 svg {
+        width: calc(120% + 1.3px);
+        height: 108px;
+    }
+}
+
+/* TESTIMONIALS SECTION */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* SOCIAL MEDIA LINKS FOR CAROUSEL */
+
 @media screen and (max-width: 900px) {
     .carousel img{
     width: calc(100%/2); 
@@ -412,10 +530,13 @@ TESTIMONIALS */
     }
 }
 }
+/* SOCIAL MEDIA LINKS FOR CAROUSEL */
 
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
 
-/* SOCIAL MEDIA LINKS FOR NAVBAR */
-@media (max-width: 900px){
+/* SOCIAL MEDIA LINKS FOR 880px */
+
+@media (max-width: 880px){
     .navbar .navbar-social-links,
     .navbar .action_btn{
         display: none;
@@ -426,27 +547,117 @@ TESTIMONIALS */
     .dropdown_menu{
         display: block;
     }
+   
+    h1,
+    .carousel-heading,
+    .test{
+        font-size: 32px;
+        font-weight: 900;
+    }
+    .b_s1{
+        padding-top: 32px;
+    }
+    .carousel-section{
+        display: flex;
+        padding: 0 50px;
+    }
+    
+}
+/* SOCIAL MEDIA LINKS FOR 880px */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* SOCIAL MEDIA LINKS FOR 720px */
+
+@media (max-width: 720px){
+    .brand_section{
+        display: flex;
+        padding: 0 50px;
+    }
+    .secondary-logo{
+        height: 130px;
+    }
+    .testimonials-wrapper{
+        display: flex;
+        padding: 0 50px;
+        padding-bottom: 150px;
+    }
+    .testimonials {
+        margin: 0; 
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px; 
+    }
+    .card{
+        margin: 20px 0;
+    }
+
+    .card:nth-of-type(1){
+        grid-column: 1/2;
+    }
+
+    .card:nth-of-type(2){
+        grid-column: 1/2;
+    }
 }
 
+/* SOCIAL MEDIA LINKS FOR 720px */
 
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* MEDIA QUERIES FOR IPHONE AND ANDROID USERS  */
 
 @media (max-width: 550px){
+   
     .dropdown_menu{
         left: 2rem;
-        width: unset; 
+        width: unset;
     }
     .secondary-logo{
-        display: flex;
         padding: 0;
-        height: 120px;
-        text-align: center;
+        display: flex;
+        
         }
+    .brand_section{
+        display: flex;
+        padding: 0 50px;
+    }
+    .carousel-section{
+        display: flex;
+        padding: 0 50px;
+    }
+
+    .testimonials-wrapper{
+        display: flex;
+        padding: 0 50px;
+        padding-bottom: 150px;
+    }
+    .testimonials {
+        margin: 0; 
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px; 
+    }
+    .card{
+        margin: 20px 0;
+    }
+
+    .card:nth-of-type(1){
+        grid-column: 1/2;
+    }
+
+    .card:nth-of-type(2){
+        grid-column: 1/2;
+    }
+    .footer .col-3{
+       padding-bottom: 50px;
+    }
+
+    .footer .col-2{
+        padding-top: 30px;
     }
    
-@media (max-width: 720px){
-
-    .secondary-logo{
-        height: 150px;
-    }
 }
+/* MEDIA QUERIES FOR IPHONE AND ANDROID USERS  */
 
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
